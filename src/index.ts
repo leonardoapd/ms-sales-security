@@ -1,6 +1,9 @@
 import {ApplicationConfig, SecurityMsApplication} from './application';
 
 export * from './application';
+import * as dotenv from 'dotenv'; // Import dotenv from node_modules
+
+dotenv.config(); // Load the .env file
 
 export async function main(options: ApplicationConfig = {}) {
   const app = new SecurityMsApplication(options);
